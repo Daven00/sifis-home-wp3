@@ -132,6 +132,9 @@ jobs:
           push: true
           tags: ghcr.io/sifis-home/group-manager:latest
           outputs: type=registry, annotation-index.org.opencontainers.image.description=wp3-solutions - Group Manager (ACE Resource Server)
+          labels: |
+            app_label=TheAppLabel
+            code_coverage=CodeCoverageResults
 
       - name: Build and push image (Group Adversary)
         uses: docker/build-push-action@v4
